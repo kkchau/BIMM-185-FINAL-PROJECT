@@ -1,0 +1,7 @@
+Question: Can the likelihood that a SNV causes aberrant splicing be used to predict its contribution to autism pathogenesis when it targets a gene coexpression network hub (highly interconnected gene)?
+Background&Assumptions: In many diseases, including austim, aberrant splicing has been found to contribute to pathogenesis; https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3059609/
+                        Gene coexpression hubs are central to biological pathways
+Hypothesis: De novo ASD muations that affect the splicing of gene-network hubs indicate that aberrant splicing caused by these SNVs are significant risk factors in ASD pathogenesis
+Case v Control: Set of ASD mutations
+                Set of sibling mutations
+Methodology: Sibling mutations that cause splicing vs ASD mutations that cause splicing IN gene-network hubs
