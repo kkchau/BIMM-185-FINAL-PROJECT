@@ -25,9 +25,11 @@ def db_filter(cur):
     ]
     cur.execute(
         "SELECT {} FROM denovo_db".format(','.join(selected_fields))
-        + " WHERE (PrimaryPhenotype='autism"
+        + " WHERE (PrimaryPhenotype='autism'"
         + " OR PrimaryPhenotype='control')"
-        + " AND Variant RLIKE '^[A-Z]>[A-Z]$';"
+        + " AND Variant RLIKE '^[A-Z]>[A-Z]$'"
+        + " AND (Exon_Intron RLIKE '^exon'"
+        + " OR Exon_Intron RLIKE '^intron');"
     )
     return cur.fetchall()
 
@@ -37,10 +39,19 @@ def main():
         Main function
     """
     connection = pymysql.connect(
-        host='bm185s-mysql.ucsd.edu',
+        host='localhost',
         user='root',
         db='bimm185',
         passwd=getpass.getpass("Input password: ")
     )
     cursor = connection.cursor()
     records = db_filter(cursor)
+
+    with open('filtered_denovo_db.tsv', 'w') as output:
+        output.write('\n'.join(
+            ['\t'.join([str(r) for r in record]) for record in records]
+        ))
+
+
+if __name__ == '__main__':
+    main()

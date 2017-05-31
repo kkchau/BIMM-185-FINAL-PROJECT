@@ -1,3 +1,5 @@
+# standard denovo_db table
+/*
 CREATE TABLE denovo_db ( 
     SampleID VARCHAR(125) NOT NULL,
     StudyName VARCHAR(125) NOT NULL,
@@ -33,3 +35,20 @@ CREATE TABLE denovo_db (
     KEY (Gene),
     KEY (Transcript)
 ) ENGINE=InnoDB;
+*/
+
+# filtered denovo_db table with scores
+CREATE TABLE denovo_db (
+    PrimaryPhenotype VARCHAR(125) NOT NULL,
+    Gene VARCHAR(125) NOT NULL,
+    Transcript VARCHAR(125) NOT NULL,
+    Chromosome VARCHAR(125) NOT NULL,
+    Position BIGINT(15) NOT NULL,
+    Variant VARCHAR(500) NOT NULL,
+    SpliceScore DOUBLE PRECISION NOT NULL,
+    PathogenScore DOUBLE PRECISION NOT NULL,
+    KEY (Gene),
+    KEY (Transcript),
+    KEY (PrimaryPhenotype)
+) ENGINE=InnoDB;
+
