@@ -38,7 +38,7 @@ CREATE TABLE denovo_db (
 */
 
 # filtered denovo_db table with scores
-CREATE TABLE denovo_db (
+CREATE TABLE scored_denovo_db (
     PrimaryPhenotype VARCHAR(125) NOT NULL,
     Gene VARCHAR(125) NOT NULL,
     Transcript VARCHAR(125) NOT NULL,
