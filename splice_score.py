@@ -6,10 +6,15 @@
 import subprocess
 
 
+# input and output files
 with open('filtered_denovo_db.tsv', 'r') as db:
     with open('splice_score_denovo.tsv', 'w') as splice:
+
+        # iterate through input file
         for line in db:
             line = line.strip().split()
+
+            # relevant variables
             chromosome = line[3]
             position = line[4]
             ref, var = line[5].strip().split('>')
