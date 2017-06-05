@@ -36,7 +36,7 @@ def control(cur, positive=True):
         )
         p_result = cur.fetchall()
         pathog_per_period.append(
-            [g for p,g in zip(
+            [p*g for p,g in zip(
                 pathog_scores, [risk[0] for risk in p_result]
             )]
         )
@@ -55,8 +55,32 @@ if __name__ == '__main__':
     pos_splice, pos_pathog = control(cursor)
     neg_splice, neg_pathog = control(cursor, positive=False)
 
-    plt.scatter(pos_splice, pos_pathog[1])
-    """
+    # scatter plots for splice score vs pathogenicity
+    for i in range(8):
+
+        # positive
+        plt.clf()
+        plt.xlabel("Splice Score")
+        plt.ylabel("Pathogenicity Score")
+        plt.title("Relationship Between Splice Probability and Pathogenicity Probability\nin ASD Variants")
+        plt.scatter(pos_splice, pos_pathog[i])
+        plt.savefig("splice_path_positive_{}".format(i + 1))
+        
+        # negative
+        plt.clf()
+        plt.xlabel("Splice Score")
+        plt.ylabel("Pathogenicity Score")
+        plt.title("Relationship Between Splice Probability and Pathogenicity Probability\nin Control Variants")
+        plt.scatter(neg_splice, neg_pathog[i])
+        plt.savefig("splice_path_negative_{}".format(i + 1))
+
+
+
+    # positive and control KDE distributions
+    plt.clf()
+    plt.xlabel("Splice Score")
+    plt.ylabel("Frequency")
+    plt.title("Distribution of Splice Probabilities")
     p_kde = gaussian_kde(pos_splice)
     n_kde = gaussian_kde(neg_splice)
     x_val = np.arange(-1, 0.5, 0.01)
@@ -64,5 +88,5 @@ if __name__ == '__main__':
     plt.plot(x_val, p_kde(x_val))
     plt.plot(x_val, n_kde(x_val))
     plt.legend(["Autism", "Control"])
-    """
+    plt.savefig("splice_distributions")
     plt.show()
