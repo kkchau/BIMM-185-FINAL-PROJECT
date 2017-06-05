@@ -7,7 +7,7 @@
 
 ---
 
-Predicting Pathogenicity using Aberrant Splicing Predictions of Single Nucleotide Variants in Autism Spectrum Disorder
+# Predicting Pathogenicity using Aberrant Splicing Predictions of Single Nucleotide Variants in Autism Spectrum Disorder
 
-Is it possible to use the likelihood that an SNV causes aberrant splicing to predict that SNV’s pathogenicity in the context of Autism Spectrum Disorder?
+## Is it possible to use the likelihood that an SNV causes aberrant splicing to predict that SNV’s pathogenicity in the context of Autism Spectrum Disorder?
 
