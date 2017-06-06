@@ -1,0 +1,11 @@
+tabix spidex_public_noncommercial_v1.0/spidex_public_noncommercial_v1_0.tab.gz chr1:0 | head -10 | cut -f1,2,3,4,5,7
+chr1	861181	G	A	0.5983	SAMD11
+chr1	861181	G	C	0.3903	SAMD11
+chr1	861181	G	T	0.6564	SAMD11
+chr1	861182	T	A	0.4921	SAMD11
+chr1	861182	T	C	0.4723	SAMD11
+chr1	861182	T	G	0.7517	SAMD11
+chr1	861183	G	A	-0.0870	SAMD11
+chr1	861183	G	C	-0.0874	SAMD11
+chr1	861183	G	T	0.1979	SAMD11
+chr1	861184	G	A	-0.1115	SAMD11

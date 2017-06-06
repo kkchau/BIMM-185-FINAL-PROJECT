@@ -1,0 +1,21 @@
+mysql> DESCRIBE scored_denovo_db;
++------------------+--------------+------+-----+---------+
+| Field            | Type         | Null | Key | Default |
++------------------+--------------+------+-----+---------+
+| PrimaryPhenotype | varchar(125) | NO   | MUL | NULL    |
+| Gene             | varchar(125) | NO   | MUL | NULL    |
+| Transcript       | varchar(125) | NO   | MUL | NULL    |
+| Chromosome       | varchar(125) | NO   |     | NULL    |
+| Position         | bigint(15)   | NO   |     | NULL    |
+| Variant          | varchar(500) | NO   |     | NULL    |
+| SpliceScore      | double       | NO   |     | NULL    |
+| PathogenScore    | double       | NO   |     | NULL    |
+| P1Risk           | double       | NO   |     | NULL    |
+| P2Risk           | double       | NO   |     | NULL    |
+| P3Risk           | double       | NO   |     | NULL    |
+| P4Risk           | double       | NO   |     | NULL    |
+| P5Risk           | double       | NO   |     | NULL    |
+| P6Risk           | double       | NO   |     | NULL    |
+| P7Risk           | double       | NO   |     | NULL    |
+| P8Risk           | double       | NO   |     | NULL    |
++------------------+--------------+------+-----+---------+
