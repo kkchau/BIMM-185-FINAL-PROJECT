@@ -55,26 +55,38 @@ if __name__ == '__main__':
     pos_splice, pos_pathog = control(cursor)
     neg_splice, neg_pathog = control(cursor, positive=False)
 
+    # positive
+    pos_fig = plt.figure()
+    pos_fig.suptitle("Splice Probability vs. Pathogenicity in ASD SNVs")
+
+    # negative
+    neg_fig = plt.figure()
+    neg_fig.suptitle("Splice Probability vs. Pathogenicity in Control SNVs")
+
     # scatter plots for splice score vs pathogenicity
     for i in range(8):
 
         # positive
-        plt.clf()
-        plt.xlabel("Splice Score")
-        plt.ylabel("Pathogenicity Score")
-        plt.title("Relationship Between Splice Probability and Pathogenicity Probability\nin ASD Variants")
-        plt.scatter(pos_splice, pos_pathog[i])
-        plt.savefig("splice_path_positive_{}".format(i + 1))
-        
+        ax = pos_fig.add_subplot(241 + i)
+        # ax.set_xlabel("Splice Score")
+        # ax.set_ylabel("Pathogenicity Score")
+        ax.scatter(pos_splice, pos_pathog[i], s=2)
+
         # negative
-        plt.clf()
-        plt.xlabel("Splice Score")
-        plt.ylabel("Pathogenicity Score")
-        plt.title("Relationship Between Splice Probability and Pathogenicity Probability\nin Control Variants")
-        plt.scatter(neg_splice, neg_pathog[i])
-        plt.savefig("splice_path_negative_{}".format(i + 1))
+        an = neg_fig.add_subplot(241 + i)
+        # an.set_xlabel("Splice Score")
+        # an.set_ylabel("Pathogenicity Score")
+        an.scatter(neg_splice, neg_pathog[i], s=2)
 
 
+    pos_fig.tight_layout()
+    neg_fig.tight_layout()
+
+    pos_fig.subplots_adjust(top=0.9)
+    neg_fig.subplots_adjust(top=0.9)
+
+    pos_fig.savefig("pos_corr.png")
+    neg_fig.savefig("neg_corr.png")
 
     # positive and control KDE distributions
     plt.clf()

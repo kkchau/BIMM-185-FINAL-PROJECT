@@ -3,7 +3,6 @@
 \usepackage{listings}
 \usepackage{hyperref}
 \usepackage{graphicx}
-\graphicspath{ {../analysis} }
 
 
 \lstdefinestyle{output}{
@@ -61,20 +60,6 @@ predictive model may be constructed with the hopes that the likelihood that a
 genetic variant causes aberrant splicing can be used to predict the contribution 
 of that variant to development of a given disease. This knowledge could provide 
 new insight into therepeutic targets at the gene or even isoform level.
-\iffalse
-The major question I wanted to answer was: "Can the likelihood that a single 
-nucleotide variant causes cassette exon skipping be used as a predictor
-for that nucleotide's potential for pathogenticity?" I hypothesized that 
-there is a correlation between an SNV's propensity to cause alternative 
-splicing and that variant's pathogenicity probability. The evidence to either 
-support or reject my hypothesis was the result of processing scores of 
-variants known to be involved in autism spectrum disorder and control variants.
-This processing included scoring each variant for the predicted change in
-splicing, as well as scoring each variant for a pathogenicity score.
-Gene-gene coexpression networks were also constructed to calculate risk scores
-for each gene affected by an SNV. Much of the data processing was done with
-Python scripts; data management was performed using a local MySQL database.
-\fi
 
 \section{Data and Processing}
 A list of variants classified by expressed phenotype was downloaded from 
@@ -89,7 +74,7 @@ in order to score the nucleotide variants for their likelihood to cause
 cassette exon skipping.
 
 \subsection{Splicing Scores with SPIDEX}
-The downloaded SPIDEX tool was used to score each SNV for the likelihood that
+The SPIDEX tool was used to score each SNV for the likelihood that
 it causes cassette exon skipping. The scoring metric used was delta PSI (dpsi),
 the change in percent inclusion rate; negative values correspond to decreased
 inclusion (exon skipping) and positive values correspond to increased inclusion 
@@ -140,10 +125,47 @@ The final dataset to analyze was compiled into a MySQL database with the
 following layout:
 
 \lstinputlisting[language=SQL]{imports/sql_example.txt}
+\pagebreak
 
-Actual analysis is yet to be performed and will be the subject of this week's 
-work.
-\\[\baselineskip]
-My GitHub with relevant code can be found here: 
-\href{https://github.com/kkchau/bimm185/}{https://github.com/kkchau/bimm185/}
+From this data, distributions could be plotted. First, a kernel density 
+estimate was performed for the frequencies of splice scores for both the 
+autism phenotype and control phenotype.
+
+\begin{figure}[ht]
+\centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../analysis/splice_distributions.png}
+    \caption{Kernel density estimates of autism SNV splice scores and control SNV splice scores}
+\end{figure}
+
+\pagebreak
+
+Scatter plots between splicing scores and pathogenicity scores
+may also be drawn in order to illustrate any correlation between the two over
+each developmental period and in each condition.
+
+\begin{figure}[ht]
+\centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../analysis/pos_corr.png}
+    \caption{Splicing probabilities (x-axis) plotted against pathogenicity probabilities (y-axis) for each developmental period in SNVs implicated in autism}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../analysis/neg_corr.png}
+    \caption{Splicing probabilities (x-axis) plotted against pathogenicity probabilities (y-axis) for each developmental period in control SNVs}
+\end{figure}
+
+\pagebreak
+
+\section{Discussion}
+As clearly shown by the kernel density graph, there appears to be no difference
+in the distribution of autism-implicated SNVs and control SNVs; it would appear
+that there is no association between splicing predictions and disease phenotype
+expression. This conclusion is further supported by the splice versus 
+pathogen score plots that follow. In this specific context, there is no 
+correlation between splicing prediction scores and pathogenicity scores.
+
+\section{Supplementary Materials}
+Relevant code:\\
+\href{https://github.com/kkchau/bimm185/}{https://github.com/kkchau/BIMM-185-FINAL-PROJECT/}
 \end{document}
