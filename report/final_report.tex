@@ -91,7 +91,7 @@ file was queried using the $tabix$ utility provided by the htslib C library
 \lstinputlisting{imports/example_spidex.txt}
 
 with fields as Chromosome, Position, Reference Allele, Mutant Allele, dPSI, 
-and Gene.
+and Gene. 
 
 \subsection{Pathogenicity Scores with UMD Predictor}
 Pathogenicity of the given variants were scored with the web tool UMD 
@@ -171,6 +171,12 @@ model incorporating these values would be completely unreliable. However,
 the data and the methods used to process that data are highly specific to this 
 particular context. That is, aberrant splicing of gene transcripts may 
 contribute moreso to other genetic diseases besides autism spectrum disorder. 
+Additionally, this analysis was performed against only single nucleotide 
+variants; that is, only nucleotide substitutions were observed. Therefore,
+there is likely a lower chance for actual protein modifications relative to
+mutations that induce frameshifts. There was no differentiation between 
+synonymous and nonsynonymous SNVs; the inclusion of synonymous SNVs could very
+well skew the resulting distributions toward similarity between the phenotypes.
 Furthermore, this entire process is based on the assumption that the given 
 tools can reliably predict the required values. Further analysis is required
 using alternative datasets and prediction tools.
