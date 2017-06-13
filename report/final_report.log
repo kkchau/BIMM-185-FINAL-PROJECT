@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.1)  8 JUN 2017 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.1)  13 JUN 2017 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -623,31 +623,52 @@ e 136.
 File: ../analysis/pos_corr.png Graphic file (type png)
 
 <use ../analysis/pos_corr.png>
-Package pdftex.def Info: ../analysis/pos_corr.png used on input line 148.
+Package pdftex.def Info: ../analysis/pos_corr.png used on input line 151.
 (pdftex.def)             Requested size: 390.01707pt x 292.5128pt.
 
 <../analysis/neg_corr.png, id=109, 462.528pt x 346.896pt>
 File: ../analysis/neg_corr.png Graphic file (type png)
 
 <use ../analysis/neg_corr.png>
-Package pdftex.def Info: ../analysis/neg_corr.png used on input line 154.
+Package pdftex.def Info: ../analysis/neg_corr.png used on input line 157.
 (pdftex.def)             Requested size: 390.01707pt x 292.5128pt.
- [6 <../analysis/pos_corr.png>] [7 <../analysis/neg_corr.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 199.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 199.
+ [6 <../analysis/pos_corr.png>]
+<../analysis/posterior.png, id=117, 462.528pt x 346.896pt>
+File: ../analysis/posterior.png Graphic file (type png)
+
+<use ../analysis/posterior.png>
+Package pdftex.def Info: ../analysis/posterior.png used on input line 175.
+(pdftex.def)             Requested size: 390.01707pt x 292.5128pt.
+ [7 <../analysis/neg_corr.png>] [8 <../analysis/posterior.png>] <../analysis/sv
+s.png, id=130, 462.528pt x 346.896pt>
+File: ../analysis/svs.png Graphic file (type png)
+
+<use ../analysis/svs.png>
+Package pdftex.def Info: ../analysis/svs.png used on input line 189.
+(pdftex.def)             Requested size: 390.01707pt x 292.5128pt.
+ <../analysis/acc.png, id=131, 462.528pt x 346.896pt>
+File: ../analysis/acc.png Graphic file (type png)
+
+<use ../analysis/acc.png>
+Package pdftex.def Info: ../analysis/acc.png used on input line 198.
+(pdftex.def)             Requested size: 390.01707pt x 292.5128pt.
+ [9 <../analysis/svs.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 222.
+ [10 <../analysis/acc.png>]
+[11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 222.
  (./final_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 199.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 199.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 222.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 222.
 Package rerunfilecheck Info: File `final_report.out' has not changed.
 (rerunfilecheck)             Checksum: 4429A54E761F3856B9AB8BB8321BA55D;496.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 199.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 222.
  ) 
 Here is how much of TeX's memory you used:
- 7341 strings out of 494953
- 103648 string characters out of 6180978
- 304561 words of memory out of 5000000
- 10512 multiletter control sequences out of 15000+600000
+ 7362 strings out of 494953
+ 104028 string characters out of 6180978
+ 304646 words of memory out of 5000000
+ 10524 multiletter control sequences out of 15000+600000
  9154 words of font info for 32 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  31i,5n,43p,270b,1549s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -661,10 +682,10 @@ t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts
 public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti10.pfb>
-Output written on final_report.pdf (9 pages, 238765 bytes).
+Output written on final_report.pdf (12 pages, 386674 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
- 54 named destinations out of 1000 (max. 500000)
- 80 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 95 words of extra memory for PDF output out of 10000 (max. 10000000)
 

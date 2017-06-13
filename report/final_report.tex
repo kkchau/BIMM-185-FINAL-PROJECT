@@ -137,6 +137,9 @@ autism phenotype and control phenotype.
     \caption{Kernel density estimates of autism SNV splice scores and control SNV splice scores}
 \end{figure}
 
+As shown, there seems to be a clear distinction between the distributions of 
+splice scores between the autism phenotype and control phenotype.
+
 \pagebreak
 
 Scatter plots between splicing scores and pathogenicity scores
@@ -157,40 +160,60 @@ each developmental period and in each condition.
 
 \pagebreak
 
+Clearly, since there is no correlation between the UMD Predictor predicted
+pathogenicity scores, transformed by gene risk factors, and splice scores,
+this data cannot be used as a prior probability. Therefore, a posterior 
+probability function is calculated using prior probability of 0.5; that is,
+an unweighted posterior probability function is created. Additionally, only a
+random sample of half of the scores was used to create the posterior probability
+function so as to better gauge the predictive power of the model through
+benchmarking tests utilizing the various attributes of confusion matrix values
+over a range of thresholding powers.
+
+\begin{figure}[ht]
+\centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../analysis/posterior.png}
+    \caption{Posterior probability function}
+\end{figure}
+
+\pagebreak
+
+Benchmarking of the model was performed in order to gauge its predictive power.
+Sensitivity and specificity plots were drawn to illustrate the performance
+of the inference model.
+
+\pagebreak
+
+\begin{figure}[ht]
+\centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../analysis/svs.png}
+    \caption{Sensitivity and specificity curves.}
+\end{figure}
+
+In addition, an accuracy curve was plotted to illustrate the relationship
+between the true predictions and false predictions
+
+\begin{figure}[ht]
+\centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../analysis/acc.png}
+    \caption{Accuracy curve}
+\end{figure}
+
+\pagebreak
+
 \section{Discussion}
-As clearly shown by the kernel density graph, there appears to be no difference
-in the distribution of autism-implicated SNVs and control SNVs; it would appear
-that there is no association between splicing predictions and disease phenotype
-expression. This conclusion is further supported by the splice versus 
-pathogen score plots that follow. In this specific context, there is no 
-correlation between splicing prediction scores and pathogenicity scores.
-\\[\baselineskip]
-Since there is no difference between the distributions of SNV splice 
-likelihoods between the autism phenotype and control phenotypes, an inference
-model incorporating these values would be completely unreliable. However,
-the data and the methods used to process that data are highly specific to this 
-particular context. That is, aberrant splicing of gene transcripts may 
-contribute moreso to other genetic diseases besides autism spectrum disorder. 
-Additionally, this analysis was performed against only single nucleotide 
-variants; that is, only nucleotide substitutions were observed. Therefore,
-there is likely a lower chance for actual protein modifications relative to
-mutations that induce frameshifts. There was no differentiation between 
-synonymous and nonsynonymous SNVs; the inclusion of synonymous SNVs could very
-well skew the resulting distributions toward similarity between the phenotypes.
-Furthermore, this entire process is based on the assumption that the given 
-tools can reliably predict the required values. Further analysis is required
-using alternative datasets and prediction tools.
-\\[\baselineskip]
-Although the results show that an inference model based on splice scores is not
-feasible, there are still a number of tangential observations that can be made.
-Interestingly, most splice scores are gathered near 0; that is, most of the 
-given SNVs yield a change-in-exon-inclusion percentage of only slightly less
-than 0, indicating that most of these variants do not actually induce a change in splicing,
-assuming the reliability of the SPIDEX splice predictor. With regards to the 
-gene risk assessment, period four exibited the highest interconnectedness 
-among its genes, which is reasonable given that this period represents the 
-time interval directly before birth, giving evidence of high rates of 
-neurodevelopment during this time period.
+Given the data as well as the benchmarking curves, the inference model proves
+to be remarkably accurate. However, one should note that the model proposed in
+this study is based on very specific criteria; only single nucleotide variants
+within three hundred nucleotides of a splice junction in brain-expressed genes
+that were able to be scored by the SPIDEX tool and were either implicated in 
+autism spectrum disorder or were not associated with any other disease 
+phenotype expression were considered out of the 
+entire dataset. Additionally, the posterior function was calculated without
+any prior probabilities; the likelihood that a single nucleotide variant could
+be implicated in ASD versus the control phenotype were assumed to be the same.
+Appropriation of this probabilistic model to other datasets should take these
+notes into account.
 
 \section{Supplementary Materials}
 Relevant code:\\

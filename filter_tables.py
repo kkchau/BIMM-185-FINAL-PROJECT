@@ -29,7 +29,8 @@ def db_filter(cur):
         + " OR PrimaryPhenotype='control')"
         + " AND Variant RLIKE '^[A-Z]>[A-Z]$'"
         + " AND (Exon_Intron RLIKE '^exon'"
-        + " OR Exon_Intron RLIKE '^intron');"
+        + " OR Exon_Intron RLIKE '^intron')"
+        + " AND FunctionClass!='synonymous';"
     )
     return cur.fetchall()
 
