@@ -62,26 +62,16 @@ of that variant to development of a given disease. This knowledge could provide
 new insight into therepeutic targets at the gene or even isoform level.
 
 \section{Data and Processing (Strategy)}
-The proposed strategy is to compile a list of single nucleotide variants with
-confirmed associaion with either the autism spectrum disoroder phenotype or a 
-control phenotype, score these SNVs for splice likelihood, pathogenicity, and 
-associated gene risk, compare the distributions of scores, and develop a model
-(see Figure 1). A list of variants classified by expressed phenotype was 
-downloaded from DenovoDB, a database of nucleotide variants. Only variants 
-tagged with the autism phenotype and control phenotype were downloaded. 
-Overall, the taken from DenovoDB included the phenotype, the nucleotide 
-variant, chromosome, affected gene, and starting position of the variant. 
-This table was uploaded to a locally hosted MySQL database for simplified 
-querying. Since only SNVs were analyzed, the dataset was filtered for only 
-mutations that substitute one nucleotide for another. The SPIDEX splicing 
-scoring tool was downloaded in order to score the nucleotide variants for their 
-likelihood to cause cassette exon skipping.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{flow.png}
-    \caption{Schematic of proposed model}
-\end{figure}
+A list of variants classified by expressed phenotype was downloaded from 
+DenovoDB, a database of nucleotide variants. Only variants tagged with the
+autism phenotype and control phenotype were downloaded. Overall, the 
+taken from DenovoDB included the phenotype, the nucleotide variant, chromosome,
+affected gene, and starting position of the variant. This table was uploaded
+to a locally hosted MySQL database for simplified querying. Since only SNVs 
+were analyzed, the dataset was filtered for only mutations that substitute
+one nucleotide for another. The SPIDEX splicing scoring tool was downloaded 
+in order to score the nucleotide variants for their likelihood to cause 
+cassette exon skipping.
 
 \subsection{Splicing Scores with SPIDEX}
 The SPIDEX tool was used to score each SNV for the likelihood that
@@ -135,6 +125,7 @@ The final dataset to analyze was compiled into a MySQL database with the
 following layout:
 
 \lstinputlisting[language=SQL]{imports/sql_example.txt}
+\pagebreak
 
 From this data, distributions could be plotted. First, a kernel density 
 estimate was performed for the frequencies of splice scores for both the 
@@ -146,22 +137,25 @@ autism phenotype and control phenotype.
     \caption{Kernel density estimates of autism SNV splice scores and control SNV splice scores}
 \end{figure}
 
-\pagebreak
-
 As shown, there seems to be a clear distinction between the distributions of 
 splice scores between the autism phenotype and control phenotype.
+
+\pagebreak
 
 Scatter plots between splicing scores and pathogenicity scores
 may also be drawn in order to illustrate any correlation between the two over
 each developmental period and in each condition.
 
-\pagebreak
-
-\begin{figure}[h!]
+\begin{figure}[ht]
 \centering
-    \includegraphics[width=0.8\textwidth,height=0.45\textheight,keepaspectratio]{../analysis/pos_corr.png}
-    \includegraphics[width=0.8\textwidth,height=0.45\textheight,keepaspectratio]{../analysis/neg_corr.png}
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../analysis/pos_corr.png}
     \caption{Splicing probabilities (x-axis) plotted against pathogenicity probabilities (y-axis) for each developmental period in SNVs implicated in autism}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../analysis/neg_corr.png}
+    \caption{Splicing probabilities (x-axis) plotted against pathogenicity probabilities (y-axis) for each developmental period in control SNVs}
 \end{figure}
 
 \pagebreak
@@ -187,6 +181,8 @@ over a range of thresholding powers.
 Benchmarking of the model was performed in order to gauge its predictive power.
 Sensitivity and specificity plots were drawn to illustrate the performance
 of the inference model.
+
+\pagebreak
 
 \begin{figure}[ht]
 \centering

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.1)  13 JUN 2017 13:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.1)  16 JUN 2017 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -533,12 +533,15 @@ LaTeX Info: Redefining \ref on input line 16.
 LaTeX Info: Redefining \pageref on input line 16.
 LaTeX Info: Redefining \nameref on input line 16.
 
-(./final_report.out) (./final_report.out)
+(./final_report.out) (./final_report.out
+! I can't write on file `final_report.pdf'.
+(Press Enter to retry, or Control-D to exit; default file extension is `.pdf')
+Please type another file name for output: 
+)
 \@outlinefile=\write3
 \openout3 = `final_report.out'.
 
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count108
 \scratchdimen=\dimen113
@@ -579,14 +582,19 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.47 
-      [1]
+      [1] <flow.png, id=47, 1321.18594pt x 539.76656pt>
+File: flow.png Graphic file (type png)
+ <use flow.png>
+Package pdftex.def Info: flow.png used on input line 82.
+(pdftex.def)             Requested size: 389.98839pt x 159.32858pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 88.
+(Font)              <12> on input line 98.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 88.
+(Font)              <8> on input line 98.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 88.
- [2] (./imports/example_spidex.txt
+(Font)              <6> on input line 98.
+ [2]
+(./imports/example_spidex.txt
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -598,7 +606,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 1.
-) [3]
+) [3 <./flow.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -610,68 +618,67 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
-) [4]
-<../analysis/splice_distributions.png, id=100, 462.528pt x 346.896pt>
+ [4])
+<../analysis/splice_distributions.png, id=82, 462.528pt x 346.896pt>
 File: ../analysis/splice_distributions.png Graphic file (type png)
 
 <use ../analysis/splice_distributions.png>
 Package pdftex.def Info: ../analysis/splice_distributions.png used on input lin
-e 136.
+e 145.
 (pdftex.def)             Requested size: 390.01707pt x 292.5128pt.
- [5 <../analysis/splice_distributions.png>] <../analysis/pos_corr.png, id=108, 
-462.528pt x 346.896pt>
+ [5] [6 <../analysis/splice_distributions.png>] <../analysis/pos_corr.png, id=1
+16, 462.528pt x 346.896pt>
 File: ../analysis/pos_corr.png Graphic file (type png)
 
 <use ../analysis/pos_corr.png>
-Package pdftex.def Info: ../analysis/pos_corr.png used on input line 151.
-(pdftex.def)             Requested size: 390.01707pt x 292.5128pt.
+Package pdftex.def Info: ../analysis/pos_corr.png used on input line 162.
+(pdftex.def)             Requested size: 312.01648pt x 234.01236pt.
 
-<../analysis/neg_corr.png, id=109, 462.528pt x 346.896pt>
+<../analysis/neg_corr.png, id=117, 462.528pt x 346.896pt>
 File: ../analysis/neg_corr.png Graphic file (type png)
 
 <use ../analysis/neg_corr.png>
-Package pdftex.def Info: ../analysis/neg_corr.png used on input line 157.
-(pdftex.def)             Requested size: 390.01707pt x 292.5128pt.
- [6 <../analysis/pos_corr.png>]
-<../analysis/posterior.png, id=117, 462.528pt x 346.896pt>
+Package pdftex.def Info: ../analysis/neg_corr.png used on input line 163.
+(pdftex.def)             Requested size: 312.01648pt x 234.01236pt.
+ [7 <../analysis/pos_corr.png> <../analysis/neg_corr.png>] <../analysis/posteri
+or.png, id=125, 462.528pt x 346.896pt>
 File: ../analysis/posterior.png Graphic file (type png)
 
 <use ../analysis/posterior.png>
-Package pdftex.def Info: ../analysis/posterior.png used on input line 175.
+Package pdftex.def Info: ../analysis/posterior.png used on input line 181.
 (pdftex.def)             Requested size: 390.01707pt x 292.5128pt.
- [7 <../analysis/neg_corr.png>] [8 <../analysis/posterior.png>] <../analysis/sv
-s.png, id=130, 462.528pt x 346.896pt>
+ [8 <../analysis/posterior.png>]
+<../analysis/svs.png, id=132, 462.528pt x 346.896pt>
 File: ../analysis/svs.png Graphic file (type png)
-
-<use ../analysis/svs.png>
-Package pdftex.def Info: ../analysis/svs.png used on input line 189.
+ <use ../analysis/svs.png>
+Package pdftex.def Info: ../analysis/svs.png used on input line 193.
 (pdftex.def)             Requested size: 390.01707pt x 292.5128pt.
- <../analysis/acc.png, id=131, 462.528pt x 346.896pt>
+
+<../analysis/acc.png, id=133, 462.528pt x 346.896pt>
 File: ../analysis/acc.png Graphic file (type png)
-
-<use ../analysis/acc.png>
-Package pdftex.def Info: ../analysis/acc.png used on input line 198.
+ <use ../analysis/acc.png>
+Package pdftex.def Info: ../analysis/acc.png used on input line 202.
 (pdftex.def)             Requested size: 390.01707pt x 292.5128pt.
- [9 <../analysis/svs.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
- [10 <../analysis/acc.png>]
-[11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 223.
+
+[9 <../analysis/svs.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 227.
+ [10 <../analysis/acc.png>] [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 227.
  (./final_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 227.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 227.
 Package rerunfilecheck Info: File `final_report.out' has not changed.
-(rerunfilecheck)             Checksum: 4429A54E761F3856B9AB8BB8321BA55D;496.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
+(rerunfilecheck)             Checksum: 5D55790DD38B3A586BEB5315FCB3DBBA;524.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 227.
  ) 
 Here is how much of TeX's memory you used:
- 7362 strings out of 494953
- 104028 string characters out of 6180978
- 304561 words of memory out of 5000000
- 10524 multiletter control sequences out of 15000+600000
+ 7367 strings out of 494953
+ 104087 string characters out of 6180978
+ 301826 words of memory out of 5000000
+ 10528 multiletter control sequences out of 15000+600000
  9154 words of font info for 32 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 31i,5n,43p,270b,1549s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,5n,43p,270b,2062s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
@@ -682,10 +689,10 @@ t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts
 public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti10.pfb>
-Output written on final_report.pdf (12 pages, 386717 bytes).
+Output written on final_report.pdf (12 pages, 433871 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
+ 200 PDF objects out of 1000 (max. 8388607)
  160 compressed objects within 2 object streams
  60 named destinations out of 1000 (max. 500000)
- 95 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
 
